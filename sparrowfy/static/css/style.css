@@ -1,0 +1,155 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+div.playbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 11vh;
+  background-color: #040404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.playbar div.currplay h5 {
+  font-size: 1rem;
+  color: white;
+  margin-left: 10px;
+}
+div.playbar div.currplay h6 {
+  font-size: 0.4rem;
+  color: white;
+  margin-left: 10px;
+}
+div.playbar div.currplay {
+  flex: 3 1 10vh;
+  background-color: #040404;
+}
+div.playbar div.control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 10 1 10vh;
+  background-color: #040404;
+}
+div.playbar div.control div.playOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.playbar div.control div.playOptions img.mainicons {
+  width: 25px;
+  color: #b3b3b3;
+}
+div.playbar div.control div.playOptions div.mainicons {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+div.playbar div.control div.playOptions img.playicon {
+  width: 40px;
+}
+div.playbar div.control div.playOptions div.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.playbar div.control div.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.playbar div.control div.progress #progressBar {
+  width: 40vw;
+}
+div.playbar div.vol {
+  flex: 3 1 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.playbar div.vol #volumeBar {
+  width: 90%;
+}
+div.playbar div.vol img.mainicons {
+  width: 30px;
+  color: #b3b3b3;
+  margin-right: 10px;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #2c3e50;
+  outline: none;
+  overflow: hidden;
+}
+
+.range-slider__range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background: #375574;
+  cursor: pointer;
+  -moz-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__range[type=range]::-moz-range-progress {
+  background-color: #1db954;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.range-slider__range[type=range] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #2c3e50;
+  outline: none;
+}
+
+.range-slider__range[type=range]::-webkit-slider-runnable-track {
+  height: 15px;
+  -webkit-appearance: none;
+  color: #13bba4;
+}
+
+.range-slider__range[type=range]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+  -webkit-appearance: none;
+  background: #434343;
+  box-shadow: -1000px 0 0 1000px #1db954;
+}
+
+#currtime {
+  margin-right: 10px;
+  color: white;
+}
+
+#endtime {
+  margin-left: 10px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
