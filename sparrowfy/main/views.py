@@ -16,3 +16,5 @@ def default(request):
     song = 'kSFJGEHDCrQ'
     return render(request, 'player.html',{'CONTAINER':CONTAINER, 'song':song})
 
+def login_auth(request):
+    return render(request,'login.html')
