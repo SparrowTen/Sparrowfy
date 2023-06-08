@@ -1,0 +1,34 @@
+user:
+  id: 'INT(16)'
+  name: 'TEXT'
+  password: 'VARCHAR(16)'
+  
+  PRIMARY KEY: id
+
+song:
+  id: 'INT(16)'
+  name: 'TEXT'
+  ablum_id: 'INT(16)'
+  artist: 'TEXT'
+  disc: 'TEXT'
+  play_count: 'INT(16)'
+  like_count: 'INT(16)'
+  
+  PRIMARY KEY: id
+
+album:
+  id: 'INT(16)'
+  name: 'TEXT'
+  artist: 'TEXT'
+  play_count: 'INT(16)'
+  like_count: 'INT(16)'
+
+  PRIMARY KEY: id
+
+playlist:
+  id: 'INT(16)'
+  name: 'TEXT'
+  user_id: 'INT(16)'
+  song_id: 'INT(16)'
+
+  PRIMARY KEY: id, song_id
