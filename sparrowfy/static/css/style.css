@@ -142,7 +142,7 @@ div.playbar div.vol img.mainicons {
   transition: background 0.15s ease-in-out;
   -webkit-appearance: none;
   background: #434343;
-  box-shadow: -1000px 0 0 1000px #1db954;
+  box-shadow: -1000px 0 0 1000px #fbeb04;
 }
 
 #currtime {
