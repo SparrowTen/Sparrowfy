@@ -255,12 +255,12 @@ div.login-main {
     }
 
     .btn_log_in {
-      background: #15883e;
+      background: $themeyellow;
       color: white;
-      border: 2px solid #15883e;
+      border: 2px solid $themeyellow;
       &:hover {
-        background: #1db954;
-        border: 2px solid #1db954;
+        background: #f3f718;
+        border: 2px solid #f3f718;
       }
     }
 
