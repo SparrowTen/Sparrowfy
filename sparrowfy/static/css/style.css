@@ -394,7 +394,6 @@ div.main {
 .cardContainer {
   height: 290px;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
   overflow: auto;
 }
@@ -447,8 +446,7 @@ div.main {
 }
 
 .cardContainer {
-  padding: 1rem;
-  margin: 1rem;
+  margin: 10px;
 }
 
 div.theme {
