@@ -307,6 +307,7 @@ div.main {
   width: 80vw;
   height: 89vh;
   background-color: rgb(34, 34, 34);
+  overflow: auto;
 }
 
 .card {
@@ -446,5 +447,16 @@ div.main {
 }
 
 .cardContainer {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+div.theme {
+  margin: 1rem;
+  background-color: #303030;
+}
+div.theme h2 {
+  justify-content: center;
+  color: white;
   margin: 1rem;
 }/*# sourceMappingURL=style.css.map */
