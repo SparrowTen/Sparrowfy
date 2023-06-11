@@ -319,6 +319,7 @@ div.main {
   /*cursor: default;*/
   transition: 0.25s ease-in-out;
   margin-right: 16px;
+  margin-bottom: 16px;
 }
 
 .albumcover {
