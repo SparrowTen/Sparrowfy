@@ -25,6 +25,13 @@ div.playbar div.currplay h6 {
   color: white;
   margin-left: 10px;
 }
+div.playbar div.currplay div.currimg {
+  position: fixed;
+  bottom: 11vh;
+  width: 20vw;
+  height: 20vh;
+  background-color: white;
+}
 div.playbar div.currplay {
   flex: 3 1 10vh;
   background-color: #040404;
@@ -259,4 +266,19 @@ div.login-main form .btn_sign_up {
 div.login-main form .btn_sign_up:hover {
   background: #616467;
   color: white;
+}
+
+div.navbar {
+  width: 20vw;
+  background-color: #040404;
+  height: 89vh;
+}
+
+div.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 89vh;
+  background-color: rgb(34, 34, 34);
 }/*# sourceMappingURL=style.css.map */

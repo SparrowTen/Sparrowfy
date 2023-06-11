@@ -18,3 +18,6 @@ def default(request):
 
 def login_auth(request):
     return render(request,'login.html')
+
+def main_page(request):
+    return render(request,"mainpage.html")

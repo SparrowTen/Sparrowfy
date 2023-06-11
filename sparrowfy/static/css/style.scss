@@ -31,6 +31,14 @@ div.playbar {
       color: white;
       margin-left: 10px;
     }
+
+    div.currimg {
+      position: fixed;
+      bottom: 11vh;
+      width: 20vw;
+      height: 20vh;
+      background-color: white;
+    }
   }
 
   div.currplay {
@@ -288,4 +296,19 @@ div.login-main {
       }
     }
   }
+}
+
+div.navbar {
+  width: 20vw;
+  background-color: #040404;
+  height: 89vh;
+}
+
+div.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 89vh;
+  background-color: rgb(34, 34, 34);
 }
