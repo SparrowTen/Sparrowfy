@@ -32,7 +32,7 @@ CREATE TABLE `playlist` (
   `name` text NOT NULL,
   `user_id` int NOT NULL,
   `song_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -44,23 +44,22 @@ CREATE TABLE `song` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `artist` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `song`
 --
 
 INSERT INTO `song` (`id`, `name`, `artist`) VALUES
-(1, 'YOASOBI「アイドル」 Official Music Video', 'Ayase / YOASOBI'),
-(2, 'YOASOBI「セブンティーン」Official Music Video', 'Ayase / YOASOBI'),
-(3, 'YOASOBI「海のまにまに」Official Music Video', 'Ayase / YOASOBI'),
-(4, 'YOASOBI「アドベンチャー」Official Music Video', 'Ayase / YOASOBI'),
-(5, 'YOASOBI「好きだ」Official Music Video', 'Ayase / YOASOBI'),
-(6, 'YOASOBI「祝福」Official Music Video (『機動戦士ガンダム 水星の魔女』オープニングテーマ)', 'Ayase / YOASOBI'),
-(7, 'YOASOBI「ミスター」Official Music Video', 'Ayase / YOASOBI'),
+(1, 'YOASOBI「アイドル」', 'Ayase / YOASOBI'),
+(2, 'YOASOBI「セブンティーン」', 'Ayase / YOASOBI'),
+(3, 'YOASOBI「海のまにまに」', 'Ayase / YOASOBI'),
+(5, 'YOASOBI「好きだ」', 'Ayase / YOASOBI'),
+(6, 'YOASOBI「祝福」 (『機動戦士ガンダム 水星の魔女』オープニングテーマ)', 'Ayase / YOASOBI'),
+(7, 'YOASOBI「ミスター」', 'Ayase / YOASOBI'),
 (8, 'YOASOBI「あの夢をなぞって (Ballade Ver.)」 - スマホ映画『夢の雫と星の花』コラボスペシャルムービー', 'Ayase / YOASOBI'),
-(9, 'YOASOBI「もしも命が描けたら」Official Music Video', 'Ayase / YOASOBI'),
-(10, '「ツバメ」/ YOASOBI with ミドリーズ Official Music Video', 'Ayase / YOASOBI');
+(9, 'YOASOBI「もしも命が描けたら」', 'Ayase / YOASOBI'),
+(10, '「ツバメ」/ YOASOBI with ミドリーズ ', 'Ayase / YOASOBI');
 
 -- --------------------------------------------------------
 
@@ -72,7 +71,7 @@ CREATE TABLE `user` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `password` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

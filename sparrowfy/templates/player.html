@@ -1,8 +1,10 @@
     <div class="playbar">
       <div class="currplay">
-        <div class="currimg"></div>
-        <h5>The Kill</h5>
-        <h6>Thirty Seconds To Mars</h6>
+        <div class="currimg">
+          <img src="" alt="" id="currimg">
+        </div>
+        <h5 id="currsong">The Kill</h5>
+        <h6 id="currauthor">Thirty Seconds To Mars</h6>
     </div>
       <div class="control">
         <div class="playOptions">
@@ -76,8 +78,6 @@
           pauseicon.style.display = 'none';
           var playicon = document.getElementById('playicon');
           playicon.style.display = 'block'
-          audioPlayer.load();
-          audioPlayer.play();
         }
 
         function setVolume() {
@@ -119,8 +119,19 @@
           var currtime = document.getElementById('currtime');
           currtime.innerHTML = time_convert(Math.round(audioPlayer.currentTime));
         }, 250);
-          console.log(songtime * settime);
-          console.log(audioPlayer.currentTime);
+
+        function playsong(id,songname,author) {
+          audioPlayer.load();
+          audioPlayer.setAttribute('src', '../static/song/' + id + '.mp3')
+          setVolume();
+          audioPlayer.play()
+          toggleplayicon();
+          var currsong = document.getElementById('currsong');
+          currsong.innerHTML = songname;
+          var currauthor = document.getElementById('currauthor');
+          currauthor.innerHTML = author;
+          var img = document.getElementById('currimg');
+          img.setAttribute('src','../static/image/' + id + '.png');
         }
       </script>
     </div>

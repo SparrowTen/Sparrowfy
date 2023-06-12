@@ -32,7 +32,7 @@ div.playbar {
       margin-left: 10px;
     }
 
-    div.currimg {
+    #currimg {
       position: fixed;
       bottom: 11vh;
       width: 20vw;
@@ -491,4 +491,24 @@ div.theme {
 
 #pauseicon {
   display: none;
+}
+
+.albumtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1rem;
+}
+
+.albumauthor {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  color: gray;
+}
+
+.theme {
+  border-radius: 1rem;
+  padding: 0.75rem;
 }
