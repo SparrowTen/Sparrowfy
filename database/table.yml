@@ -6,22 +6,9 @@ user:
   PRIMARY KEY: id
 
 song:
-  id: 'INT(16)'
-  name: 'TEXT'
-  ablum_id: 'INT(16)'
-  artist: 'TEXT'
-  disc: 'TEXT'
-  play_count: 'INT(16)'
-  like_count: 'INT(16)'
-  
-  PRIMARY KEY: id
-
-album:
-  id: 'INT(16)'
+  id: 'INT(6)'
   name: 'TEXT'
   artist: 'TEXT'
-  play_count: 'INT(16)'
-  like_count: 'INT(16)'
 
   PRIMARY KEY: id
 
