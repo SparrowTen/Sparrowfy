@@ -10,7 +10,6 @@
                 <img class="mainicons"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
                     alt=""></img></div>
-
             <div id='playicon' class="mainicons playicon" onclick="start(),toggleplayicon()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142731144560640/play-circle.svg"
@@ -77,6 +76,8 @@
           pauseicon.style.display = 'none';
           var playicon = document.getElementById('playicon');
           playicon.style.display = 'block'
+          audioPlayer.load();
+          audioPlayer.play();
         }
 
         function setVolume() {
@@ -118,6 +119,9 @@
           var currtime = document.getElementById('currtime');
           currtime.innerHTML = time_convert(Math.round(audioPlayer.currentTime));
         }, 250);
+          console.log(songtime * settime);
+          console.log(audioPlayer.currentTime);
+        }
       </script>
     </div>
 
