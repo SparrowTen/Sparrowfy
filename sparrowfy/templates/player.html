@@ -11,7 +11,7 @@
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
                     alt=""></img></div>
 
-            <div id='playicon' class="mainicons playicon">
+            <div id='playicon' class="mainicons playicon" onclick="start()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142731144560640/play-circle.svg"
                     alt=""></img></div>
@@ -35,6 +35,7 @@
               value="0"
               min="0"
               max="100"
+              oninput="setTime()"
             />
           </div>
           <span id="endtime">4:00</span>
@@ -43,8 +44,36 @@
       <div class="vol">
         <img id="vol-icon" class="mainicons" src="https://cdn.discordapp.com/attachments/768083738848133130/773921822492065843/v2.png" alt="">
         <div id='volume' class="range-slider">
-            <input id='volumeBar' oninput="setVolume()" class="range-slider__range" type="range" value="100" min="0"
-                max="500">
-        </div></div>
+            <input id='volumeBar' oninput="setVolume()" class="range-slider__range" type="range" value="30" min="0"
+                max="250">
+        </div>
+      </div>
+
+      <script>
+      const audioPlayer = document.createElement('audio');
+        function start() {
+          setVolume();
+          audioPlayer.setAttribute('src', '../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3');
+          audioPlayer.load();
+          audioPlayer.play();
+        }
+
+        function setVolume() {
+          const volume = document.getElementById('volumeBar');
+          var setvalue = volume.value/500;
+          audioPlayer.volume = setvalue;
+          // console.log(setvalue);
+        }
+
+        function setTime(){
+          audioPlayer.currentTime = 66;
+          // const time = document.getElementById('progressBar').value;
+          // settime = time / 100;
+          // songtime = audioPlayer.duration;
+          // audioPlayer.currentTime = audioPlayer.currentTime + 5;
+          // console.log(songtime * settime);
+          console.log(audioPlayer.currentTime);
+        }
+      </script>
     </div>
 
