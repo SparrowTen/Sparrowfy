@@ -65,6 +65,7 @@ div.playbar {
       }
 
       div.mainicons {
+        cursor: pointer;
         padding-left: 2.5vw;
         padding-right: 2.5vw;
       }
@@ -486,4 +487,8 @@ div.theme {
     margin: 1rem;
   }
   background-color: #303030;
+}
+
+#pauseicon {
+  display: none;
 }
