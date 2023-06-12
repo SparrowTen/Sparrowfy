@@ -50,10 +50,10 @@
       </div>
 
       <script>
-      const audioPlayer = document.createElement('audio');
+      const audioPlayer = new Audio('../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3');
         function start() {
           setVolume();
-          audioPlayer.setAttribute('src', '../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3');
+          // <!-- audioPlayer.setAttribute('src', '../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3'); -->
           audioPlayer.load();
           audioPlayer.play();
         }
@@ -67,11 +67,11 @@
 
         function setTime(){
           audioPlayer.currentTime = 66;
-          // const time = document.getElementById('progressBar').value;
-          // settime = time / 100;
-          // songtime = audioPlayer.duration;
-          // audioPlayer.currentTime = audioPlayer.currentTime + 5;
-          // console.log(songtime * settime);
+          const time = document.getElementById('progressBar').value;
+          settime = time / 100;
+          songtime = audioPlayer.duration;
+          audioPlayer.currentTime = songtime * settime;
+          console.log(songtime * settime);
           console.log(audioPlayer.currentTime);
         }
       </script>
