@@ -275,6 +275,7 @@ div.navbar {
   height: 89vh;
 }
 div.navbar div.logo {
+  display: flex;
   padding: 1rem;
 }
 div.navbar div.logo h1 {

@@ -133,6 +133,16 @@
           var img = document.getElementById('currimg');
           img.setAttribute('src','../static/image/' + id + '.png');
         }
+
+        function init() {
+          audioPlayer.setAttribute('src', '../static/song/1.mp3')
+          var img = document.getElementById('currimg');
+          img.setAttribute('src','../static/image/1.png');
+          var currsong = document.getElementById('currsong');
+          currsong.innerHTML = 'アイドル';
+          var currauthor = document.getElementById('currauthor');
+          currauthor.innerHTML = 'YOASOBI';
+        }
       </script>
     </div>
 

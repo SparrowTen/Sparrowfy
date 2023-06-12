@@ -51,15 +51,27 @@ CREATE TABLE `song` (
 --
 
 INSERT INTO `song` (`id`, `name`, `artist`) VALUES
-(1, 'YOASOBI「アイドル」', 'Ayase / YOASOBI'),
-(2, 'YOASOBI「セブンティーン」', 'Ayase / YOASOBI'),
-(3, 'YOASOBI「海のまにまに」', 'Ayase / YOASOBI'),
-(5, 'YOASOBI「好きだ」', 'Ayase / YOASOBI'),
-(6, 'YOASOBI「祝福」 (『機動戦士ガンダム 水星の魔女』オープニングテーマ)', 'Ayase / YOASOBI'),
-(7, 'YOASOBI「ミスター」', 'Ayase / YOASOBI'),
-(8, 'YOASOBI「あの夢をなぞって (Ballade Ver.)」 - スマホ映画『夢の雫と星の花』コラボスペシャルムービー', 'Ayase / YOASOBI'),
-(9, 'YOASOBI「もしも命が描けたら」', 'Ayase / YOASOBI'),
-(10, '「ツバメ」/ YOASOBI with ミドリーズ ', 'Ayase / YOASOBI');
+(1, 'アイドル', 'Ayase / YOASOBI'),
+(2, 'セブンティーン', 'Ayase / YOASOBI'),
+(3, '海のまにまに', 'Ayase / YOASOBI'),
+(4, 'アドベンチャー', 'Ayase / YOASOBI'),
+(5, '好きだ', 'Ayase / YOASOBI'),
+(6, '祝福', 'Ayase / YOASOBI'),
+(7, 'ミスター', 'Ayase / YOASOBI'),
+(8, 'あの夢をなぞって (Ballade Ver.)', 'Ayase / YOASOBI'),
+(9, 'もしも命が描けたら', 'Ayase / YOASOBI'),
+(10, 'ツバメ', 'Ayase / YOASOBI'),
+(11, 'いばら', 'Ado'),
+(12, 'アタシは問題作', 'Ado'),
+(13, 'FREEDOM', 'Ado'),
+(14, '行方知れず', 'Ado'),
+(15, 'リベリオン', 'Ado'),
+(16, '風のゆくえ（ウタ from ONE PIECE FILM RED）', 'Ado'),
+(17, 'Tot Musica（ウタ from ONE PIECE FILM RED）', 'Ado'),
+(18, '世界のつづき（ウタ from ONE PIECE FILM RED）', 'Ado'),
+(19, 'ウタカタララバイ（ウタ from ONE PIECE FILM RED）', 'Ado'),
+(20, '逆光（ウタ from ONE PIECE FILM RED）', 'Ado');
+
 
 -- --------------------------------------------------------
 

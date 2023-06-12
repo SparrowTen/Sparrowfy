@@ -2,6 +2,7 @@
 <div class="navbar">
   <div class="logo">
     <div class="logo">
+        <img src="../static/image/sparrowfy_logo.png" alt="" width="40" height="40">
       <h1>Sparrowfy</h1>
     </div>
   </div>
@@ -26,21 +27,39 @@
         <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #7b7474"></i></a>
     </div>
     <div class="theme">
-        <h2>{{artist}}</h2>
+        <h2>YOASOBI</h2>
         <div class="cardContainer">
-    {% for d in data  %}
-        <div class="card c1">
-            <div class="albumcover">
-                <img class="albumimg" src="../static/image/{{d.id}}.png" alt="" srcset="">
-                <div class="albumplay" onclick='playsong("{{d.id}}","{{d.name}}","{{d.artist}}")'><img
+        {% for d in YOASOBI  %}
+            <div class="card c1">
+                <div class="albumcover">
+                    <img class="albumimg" src="../static/image/{{d.id}}.png" alt="" srcset="">
+                    <div class="albumplay" onclick='playsong("{{d.id}}","{{d.name}}","{{d.artist}}")'><img
                         src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
                         alt=""></img></div>
+                </div>
+                <span class="label albumtitle bond-to-two-lines">{{d.name}}</span>
+                <span class="label albumauthor bond-to-two-lines">{{d.artist}}</span>
             </div>
-            <span class="label albumtitle bond-to-two-lines">{{d.name}}</span>
-            <span class="label albumauthor bond-to-two-lines">{{d.artist}}</span>
+        {% endfor %}
         </div>
-    {% endfor %}
-</div>
+    </div>
+
+    <div class="theme">
+        <h2>Ado</h2>
+        <div class="cardContainer">
+        {% for d in Ado  %}
+            <div class="card c1">
+                <div class="albumcover">
+                    <img class="albumimg" src="../static/image/{{d.id}}.png" alt="" srcset="">
+                    <div class="albumplay" onclick='playsong("{{d.id}}","{{d.name}}","{{d.artist}}")'><img
+                        src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
+                        alt=""></img></div>
+                </div>
+                <span class="label albumtitle bond-to-two-lines">{{d.name}}</span>
+                <span class="label albumauthor bond-to-two-lines">{{d.artist}}</span>
+            </div>
+        {% endfor %}
+        </div>
     </div>
 
     
