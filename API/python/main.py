@@ -16,21 +16,24 @@ if __name__ == '__main__':
 '''
 ```
 GET:
-  getID
-  127.0.0.1:5000/api/song/getID?id=1
+    getName
+    127.0.0.1:5000/api/song/getName?name=逆
 
-  getPlayList
-  127.0.0.1:5000/api/song/getPlayList?artist=Ayase / YOASOBI
+    getID
+    127.0.0.1:5000/api/song/getID?id=1
+
+    getPlayList
+    127.0.0.1:5000/api/song/getPlayList?artist=Ayase / YOASOBI
 
 POST:
-  login
-  127.0.0.1:5000/api/auth/login
-  - name
-  - passowrd
+    login
+    127.0.0.1:5000/api/auth/login
+    - name
+    - passowrd
 
-  register
-  127.0.0.1:5000/api/auth/register
-  - name
-  - password
+    register
+    127.0.0.1:5000/api/auth/register
+    - name
+    - password
 ```
 '''
