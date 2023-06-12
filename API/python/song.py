@@ -7,15 +7,21 @@ song_blp = Blueprint('song', __name__)
 CORS(song_blp)
 
 config = None
-if os.path.exists('config.yaml'):
-    config = yaml.load(open('config.yaml', 'r', encoding='utf-8'), Loader=yaml.FullLoader)
+workspace = os.path.dirname(os.path.abspath(__file__)).split('python')[0]
+if os.path.exists(workspace + 'config.yaml'):
+    config = yaml.load(open(workspace + 'config.yaml', 'r', encoding='utf-8'), Loader=yaml.FullLoader)
 else:
     print('config.yaml not found')
     os._exit(0)
 
 db = APIDataBase(config)
 
-@song_blp.route('/getSong', methods=['GET'])
+@song_blp.route('/getID', methods=['GET'])
 def getSong():
     id = request.args.get('id')
-    return jsonify(db.execSelect(f"SELECT `dept_id`, `dept_name` FROM `degree_dept` WHERE `id` = \'{id}\'"))
+    if id == None:
+        return jsonify({'error': '參數錯誤'})
+    data = db.execSelect(f'SELECT * FROM `song` WHERE `id` = {id}')
+    if data == []:
+        return jsonify({'error': '查無資料'})
+    return jsonify(data)
