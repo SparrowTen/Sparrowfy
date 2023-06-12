@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-logo">
+      <div class="logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Font_Awesome_5_brands_spotify.svg/991px-Font_Awesome_5_brands_spotify.svg.png"
+        />
+        <h1>Sparrowfy</h1>
+      </div>
+    </div>
+
+    <div class="login-main">
+      <form action="" method="post">
+        <label for="username">Email address or username</label>
+        <input
+          type="text"
+          class="form_input"
+          pattern="[A-Za-z0-9.@_-e]+"
+          name="username"
+          placeholder="Email address or username"
+          required=""
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form_input"
+          name="password"
+          placeholder="Password"
+          required=""
+        />
+        <button type="submit" class="btn btn_log_in">LOG IN</button>
+        <div class="divider"></div>
+        <p class="label center-align">Don't have an account?</p>
+        <a class="btn btn_sign_up" href="/signup">Sign Up for spotify</a>
+      </form>
+    </div>
+  </body>
+</html>

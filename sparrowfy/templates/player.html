@@ -1,0 +1,50 @@
+    <div class="playbar">
+      <div class="currplay">
+        <div class="currimg"></div>
+        <h5>The Kill</h5>
+        <h6>Thirty Seconds To Mars</h6>
+    </div>
+      <div class="control">
+        <div class="playOptions">
+            <div onclick="goToStart()" class="mainicons">
+                <img class="mainicons"
+                    src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
+                    alt=""></img></div>
+
+            <div id='playicon' class="mainicons playicon">
+                <img class="mainicons playicon"
+                    src="https://cdn.discordapp.com/attachments/768083738848133130/773142731144560640/play-circle.svg"
+                    alt=""></img></div>
+
+            <!-- <div id='pauseicon' class="mainicons playicon">
+                <img class="mainicons playicon"
+                    src="https://cdn.discordapp.com/attachments/768083738848133130/773873949082910751/pause-circle.svg"
+                    alt=""></img></div> -->
+            <div class="mainicons" onclick="nextSong()">
+                <img class="mainicons"
+                    src="https://cdn.discordapp.com/attachments/768083738848133130/773142729714696212/skip-forward.svg"
+                    alt=""></img></div>
+        </div>
+        <div class="progress">
+          <span id="currtime">00:00</span>
+          <div>
+            <input
+              id="progressBar"
+              class="range-slider__range"
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+            />
+          </div>
+          <span id="endtime">4:00</span>
+        </div>
+      </div>
+      <div class="vol">
+        <img id="vol-icon" class="mainicons" src="https://cdn.discordapp.com/attachments/768083738848133130/773921822492065843/v2.png" alt="">
+        <div id='volume' class="range-slider">
+            <input id='volumeBar' oninput="setVolume()" class="range-slider__range" type="range" value="100" min="0"
+                max="500">
+        </div></div>
+    </div>
+
