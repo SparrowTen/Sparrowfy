@@ -9,4 +9,4 @@ CORS(app)
 app.register_blueprint(song_blp, url_prefix = '/api/song/')
 
 if __name__ == '__main__':
-    app.run(debug=True,host="127.0.0.1")
+    app.run(debug=True,host="127.0.0.1",port=5500)

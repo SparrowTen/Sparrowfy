@@ -10,23 +10,22 @@
                 <img class="mainicons"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
                     alt=""></img></div>
-
-            <div id='playicon' class="mainicons playicon" onclick="start()">
+            <div id='playicon' class="mainicons playicon" onclick="start(),toggleplayicon()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142731144560640/play-circle.svg"
                     alt=""></img></div>
 
-            <!-- <div id='pauseicon' class="mainicons playicon">
+            <div id='pauseicon' class="mainicons playicon" onclick="stop(),togglepauseicon()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773873949082910751/pause-circle.svg"
-                    alt=""></img></div> -->
+                    alt=""></img></div>
             <div class="mainicons" onclick="nextSong()">
                 <img class="mainicons"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142729714696212/skip-forward.svg"
                     alt=""></img></div>
         </div>
         <div class="progress">
-          <span id="currtime">00:00</span>
+          <span id="currtime">0:00</span>
           <div>
             <input
               id="progressBar"
@@ -38,7 +37,7 @@
               oninput="setTime()"
             />
           </div>
-          <span id="endtime">4:00</span>
+          <span id="endtime">0:00</span>
         </div>
       </div>
       <div class="vol">
@@ -54,6 +53,29 @@
         function start() {
           setVolume();
           // <!-- audioPlayer.setAttribute('src', '../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3'); -->
+          // audioPlayer.load();
+          audioPlayer.play();
+
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'none';
+        }
+
+        function stop() {
+          audioPlayer.pause();
+        }
+
+        function toggleplayicon() {
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'none';
+          var pauseicon = document.getElementById('pauseicon');
+          pauseicon.style.display = 'block'
+        }
+
+        function togglepauseicon() {
+          var pauseicon = document.getElementById('pauseicon');
+          pauseicon.style.display = 'none';
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'block'
           audioPlayer.load();
           audioPlayer.play();
         }
@@ -71,6 +93,32 @@
           settime = time / 100;
           songtime = audioPlayer.duration;
           audioPlayer.currentTime = songtime * settime;
+          console.log(audioPlayer.duration);
+          console.log(audioPlayer.currentTime);
+        }
+
+        function time_convert(num){
+          var minutes = Math.floor(num / 60);  
+          var seconds = num % 60;
+          if(seconds < 10){
+            seconds = "0" + seconds.toString();
+          }
+          return minutes + ":" + seconds;         
+        }
+
+        setInterval(function () {
+          curr = audioPlayer.currentTime;
+          percentage = (curr / audioPlayer.duration) * 100;
+          var progressBar = document.getElementById('progressBar');
+          progressBar.value = percentage;
+          console.log(progressBar.value);
+
+          var endtime = document.getElementById('endtime');
+          endtime.innerHTML = time_convert(Math.round(audioPlayer.duration));
+
+          var currtime = document.getElementById('currtime');
+          currtime.innerHTML = time_convert(Math.round(audioPlayer.currentTime));
+        }, 250);
           console.log(songtime * settime);
           console.log(audioPlayer.currentTime);
         }

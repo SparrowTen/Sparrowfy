@@ -54,6 +54,7 @@ div.playbar div.control div.playOptions img.mainicons {
   color: #b3b3b3;
 }
 div.playbar div.control div.playOptions div.mainicons {
+  cursor: pointer;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
 }
@@ -458,4 +459,8 @@ div.theme h2 {
   justify-content: center;
   color: white;
   margin: 1rem;
+}
+
+#pauseicon {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
