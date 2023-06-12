@@ -6,7 +6,7 @@ class APIDataBase:
         host = config['db']['host']
         port = config['db']['port']
         user = config['db']['user']
-        password = config['db']['pwd']
+        password = config['db']['password']
         database = config['db']['database']
         key = config['db']['key']
         
