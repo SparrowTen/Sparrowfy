@@ -35,3 +35,15 @@ def getSongList():
     if data == []:
         return jsonify({'error': '查無資料'})
     return jsonify(data)
+
+@song_blp.route('/getName', methods=['GET'])
+def getName():
+    name = request.args.get('name')
+    if name == None:
+        return jsonify({'error': '參數錯誤'})
+    if name == '':
+        return jsonify({'error': '搜尋字串不得為空'})
+    data = db.execSelect(f'SELECT * FROM `song` WHERE `name` LIKE "%{name}%"')
+    if data == []:
+        return jsonify({'error': '查無資料'})
+    return jsonify(data)
