@@ -6,6 +6,7 @@ $themeyellow: #fbeb04;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 div.playbar {
@@ -29,6 +30,14 @@ div.playbar {
       font-size: 0.4rem;
       color: white;
       margin-left: 10px;
+    }
+
+    div.currimg {
+      position: fixed;
+      bottom: 11vh;
+      width: 20vw;
+      height: 20vh;
+      background-color: white;
     }
   }
 
@@ -158,7 +167,7 @@ div.playbar {
   transition: background 0.15s ease-in-out;
   -webkit-appearance: none;
   background: #434343;
-  box-shadow: -1000px 0 0 1000px #1db954;
+  box-shadow: -1000px 0 0 1000px $themeyellow;
 }
 
 #currtime {
@@ -169,4 +178,312 @@ div.playbar {
 #endtime {
   margin-left: 10px;
   color: white;
+}
+
+div.login-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  div.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d9dadc;
+  background-color: #e4e3e3;
+}
+
+div.login-main {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  position: fixed;
+
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    label {
+      font-weight: 700;
+    }
+
+    input {
+      width: 500px;
+      font-family: inherit;
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      color: #222326;
+      height: 40px;
+      padding: 0 12px;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #d9dadc;
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      font-size: 14px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-family: inherit;
+      letter-spacing: 2px;
+      font-weight: 700;
+      border: 0px;
+      display: block;
+      padding: 16px 14px 18px;
+      outline: none;
+      border-radius: 30px;
+      transition: 0.25s;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.25s;
+      }
+    }
+
+    .btn_log_in {
+      background: $themeyellow;
+      color: white;
+      border: 2px solid $themeyellow;
+      &:hover {
+        background: #f3f718;
+        border: 2px solid #f3f718;
+      }
+    }
+
+    .divider {
+      height: 1px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      background: #d9dadc;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .btn_sign_up {
+      text-align: center;
+      background: white;
+      color: #616467;
+      border: 2px solid #616467;
+      text-decoration: none;
+      &:hover {
+        background: #616467;
+        color: white;
+      }
+    }
+  }
+}
+
+div.navbar {
+  width: 20vw;
+  background-color: #040404;
+  height: 89vh;
+
+  div.logo {
+    h1 {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: $themeyellow;
+      font-size: 2rem;
+    }
+    padding: 1rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    li {
+      display: flex;
+      color: white;
+      padding: 0.5rem;
+      h6 {
+        margin-left: 1rem;
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+div.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 89vh;
+  background-color: rgb(34, 34, 34);
+  overflow: auto;
+}
+
+.card {
+  width: 220px;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  /*cursor: default;*/
+  transition: 0.25s ease-in-out;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.albumcover {
+  margin: 20px;
+  width: 180px;
+  height: 180px;
+  /* background: black; */
+  box-shadow: 0px 4px 20px #000000;
+  border-radius: 4px;
+}
+.albumimg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.albumplay {
+  width: 40px;
+  margin-right: 8px;
+  float: right;
+  opacity: 0;
+  transition: 0.5s ease;
+  margin-top: -46px;
+  cursor: pointer;
+}
+
+.albumplay img {
+  object-fit: contain;
+  width: 100%;
+  pointer-events: none;
+}
+.albumplay img:hover {
+  transform: scale(1.05);
+}
+
+.albumtitle {
+  color: white;
+  margin-left: 20px;
+  line-height: 16px;
+}
+
+.bond-to-two-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 180px;
+}
+
+.albumauthor {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.card:hover {
+  background: #272727;
+}
+
+.card:hover .albumplay {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.cardContainer {
+  height: 290px;
+  display: flex;
+  // justify-content: space-between;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.cardContainer {
+  scrollbar-width: thin;
+  // scrollbar-color: $gray--lighter transparent;
+}
+.cardContainer::-webkit-scrollbar {
+  width: 6px;
+}
+.cardContainer:-webkit-scrollbar-track {
+  background: transparent;
+}
+.cardContainer:-webkit-scrollbar-thumb {
+  // background-color: $gray--lighter;
+  border-radius: 6px;
+  border: 3px solid transparent;
+}
+
+/* webkit browsers */
+.cardContainer::-webkit-scrollbar,
+.cardContainer::-webkit-scrollbar-thumb {
+  height: 5px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+  border-radius: 44px;
+  background: #282828;
+  box-shadow: inset 0 0 0 10px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+.cardContainer::-webkit-scrollbar-thumb:active {
+  background: #5a5a5a;
+}
+
+.searchBar {
+  border-radius: 1rem;
+  height: 4vh;
+  width: 20vw;
+  margin: 1rem;
+  margin-left: 5vh;
+}
+
+.cardContainer {
+  margin: 10px;
+}
+
+div.theme {
+  margin: 1rem;
+  h2 {
+    justify-content: center;
+
+    color: white;
+    margin: 1rem;
+  }
+  background-color: #303030;
 }
