@@ -26,7 +26,7 @@
                     alt=""></img></div>
         </div>
         <div class="progress">
-          <span id="currtime">00:00</span>
+          <span id="currtime">0:00</span>
           <div>
             <input
               id="progressBar"
@@ -38,7 +38,7 @@
               oninput="setTime()"
             />
           </div>
-          <span id="endtime">4:00</span>
+          <span id="endtime">0:00</span>
         </div>
       </div>
       <div class="vol">
@@ -71,9 +71,32 @@
           settime = time / 100;
           songtime = audioPlayer.duration;
           audioPlayer.currentTime = songtime * settime;
-          console.log(songtime * settime);
+          console.log(audioPlayer.duration);
           console.log(audioPlayer.currentTime);
         }
+
+        function time_convert(num){
+          var minutes = Math.floor(num / 60);  
+          var seconds = num % 60;
+          if(seconds < 10){
+            seconds = "0" + seconds.toString();
+          }
+          return minutes + ":" + seconds;         
+        }
+
+        setInterval(function () {
+          curr = audioPlayer.currentTime;
+          percentage = (curr / audioPlayer.duration) * 100;
+          var progressBar = document.getElementById('progressBar');
+          progressBar.value = percentage;
+          console.log(progressBar.value);
+
+          var endtime = document.getElementById('endtime');
+          endtime.innerHTML = time_convert(Math.round(audioPlayer.duration));
+
+          var currtime = document.getElementById('currtime');
+          currtime.innerHTML = time_convert(Math.round(audioPlayer.currentTime));
+        }, 250);
       </script>
     </div>
 
