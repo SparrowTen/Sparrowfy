@@ -15,15 +15,15 @@
         <h1>Sparrowfy</h1>
       </div>
     </div>
-
+    {% csrf_token %}
     <div class="login-main">
-      <form action="" method="post">
+      <form action="/login/submit" method="post">
         <label for="username">Email address or username</label>
         <input
           type="text"
           class="form_input"
           pattern="[A-Za-z0-9.@_-e]+"
-          name="username"
+          name="name"
           placeholder="Email address or username"
           required=""
         />
@@ -38,7 +38,7 @@
         <button type="submit" class="btn btn_log_in">LOG IN</button>
         <div class="divider"></div>
         <p class="label center-align">Don't have an account?</p>
-        <a class="btn btn_sign_up" href="/signup">Sign Up for spotify</a>
+        <a class="btn btn_sign_up" href="/signup">Sign Up for Sparrowfy</a>
       </form>
     </div>
   </body>

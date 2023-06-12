@@ -27,6 +27,7 @@ def login():
     data = db.execSelect(f'SELECT * FROM `user` WHERE `name` = `{name}` AND `password` = `{password}`')
     if data == []:
         return jsonify({'error': '無此帳號或密碼錯誤'})
+    print(jsonify(data))
     return jsonify(data)
 
 @auth_blp.route('/register', methods=['POST'])
