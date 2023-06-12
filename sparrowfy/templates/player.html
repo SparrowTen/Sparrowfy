@@ -11,15 +11,15 @@
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
                     alt=""></img></div>
 
-            <div id='playicon' class="mainicons playicon" onclick="start()">
+            <div id='playicon' class="mainicons playicon" onclick="start(),toggleplayicon()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142731144560640/play-circle.svg"
                     alt=""></img></div>
 
-            <!-- <div id='pauseicon' class="mainicons playicon">
+            <div id='pauseicon' class="mainicons playicon" onclick="stop(),togglepauseicon()">
                 <img class="mainicons playicon"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773873949082910751/pause-circle.svg"
-                    alt=""></img></div> -->
+                    alt=""></img></div>
             <div class="mainicons" onclick="nextSong()">
                 <img class="mainicons"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142729714696212/skip-forward.svg"
@@ -54,8 +54,29 @@
         function start() {
           setVolume();
           // <!-- audioPlayer.setAttribute('src', '../static/music/YOASOBI_Official_Music_Video_128_kbps.mp3'); -->
-          audioPlayer.load();
+          // audioPlayer.load();
           audioPlayer.play();
+
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'none';
+        }
+
+        function stop() {
+          audioPlayer.pause();
+        }
+
+        function toggleplayicon() {
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'none';
+          var pauseicon = document.getElementById('pauseicon');
+          pauseicon.style.display = 'block'
+        }
+
+        function togglepauseicon() {
+          var pauseicon = document.getElementById('pauseicon');
+          pauseicon.style.display = 'none';
+          var playicon = document.getElementById('playicon');
+          playicon.style.display = 'block'
         }
 
         function setVolume() {
