@@ -158,12 +158,13 @@
           var author;
           axios.get('http://127.0.0.1:5500/api/song/getID?id='+ id)
             .then((res) => {
-              console.log(res['data'][0]['artist']);
               name = res['data'][0]['name'];
               author = res['data'][0]['artist']
+              console.log(name);
+              console.log(author);
+              playsong(id,name,author);
           });
 
-          playsong(id,name,author);
         }
 
         function lastSong() {
