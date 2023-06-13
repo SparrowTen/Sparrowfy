@@ -5,10 +5,10 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 import requests
 # import cardupdate
+import os
 
-
-
-f = open('card.json', 'r')
+workdir = os.path.dirname(__file__).split('main')[0] + '\\'
+f = open(workdir + 'card.json', 'r')
 CONTAINER = json.load(f)
 
 def default(request):
