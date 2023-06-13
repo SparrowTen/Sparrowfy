@@ -7,7 +7,7 @@ import requests
 # import cardupdate
 import os
 
-workdir = os.path.dirname(__file__).split('main')[0] + '\\'
+workdir = os.path.dirname(__file__).split('main')[0] + '/'
 f = open(workdir + 'card.json', 'r')
 CONTAINER = json.load(f)
 
