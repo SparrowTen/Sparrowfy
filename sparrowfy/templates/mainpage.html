@@ -2,6 +2,7 @@
 <div class="navbar">
   <div class="logo">
     <div class="logo">
+        <img src="../static/image/sparrowfy_logo.png" alt="" width="40" height="40">
       <h1>Sparrowfy</h1>
     </div>
   </div>
@@ -26,142 +27,41 @@
         <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #7b7474"></i></a>
     </div>
     <div class="theme">
-        <h2>Hot</h2>
+        <h2>YOASOBI</h2>
         <div class="cardContainer">
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
+        {% for d in YOASOBI  %}
+            <div class="card c1">
+                <div class="albumcover">
+                    <img class="albumimg" src="../static/image/{{d.id}}.png" alt="" srcset="">
+                    <div class="albumplay" onclick='playsong("{{d.id}}","{{d.name}}","{{d.artist}}")'><img
+                        src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
+                        alt=""></img></div>
+                </div>
+                <span class="label albumtitle bond-to-two-lines">{{d.name}}</span>
+                <span class="label albumauthor bond-to-two-lines">{{d.artist}}</span>
+            </div>
+        {% endfor %}
         </div>
     </div>
 
     <div class="theme">
-        <h2>Hot</h2>
+        <h2>Ado</h2>
         <div class="cardContainer">
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
+        {% for d in Ado  %}
+            <div class="card c1">
+                <div class="albumcover">
+                    <img class="albumimg" src="../static/image/{{d.id}}.png" alt="" srcset="">
+                    <div class="albumplay" onclick='playsong("{{d.id}}","{{d.name}}","{{d.artist}}")'><img
+                        src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
+                        alt=""></img></div>
+                </div>
+                <span class="label albumtitle bond-to-two-lines">{{d.name}}</span>
+                <span class="label albumauthor bond-to-two-lines">{{d.artist}}</span>
+            </div>
+        {% endfor %}
         </div>
     </div>
 
-    <div class="theme">
-        <h2>Hot</h2>
-        <div class="cardContainer">
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-    <div class="card c1">
-        <div class="albumcover">
-            <img class="albumimg" src="https://i.ytimg.com/vi/J3DahMkR5Sg/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&amp;rs=AOn4CLCNg7eISQ4qEYdMj3IipdYqPc9d2A" alt="" srcset="">
-            <div class="albumplay" onclick='playSong("{{ forloop.counter0 }}","{{ playlist.2 }}")'><img
-                    src="https://cdn.discordapp.com/attachments/768083738848133130/769476261181128734/image_1.png"
-                    alt=""></img></div>
-        </div>
-        <span class="label albumtitle bond-to-two-lines">MOHA &amp; Irma &amp; MEQQ - ily (Magic Cover Release)</span>
-        <span class="label albumauthor bond-to-two-lines">By Magic Music</span>
-    </div>
-        </div>
-    </div>
     
 </div>
 

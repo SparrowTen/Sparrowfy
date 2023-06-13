@@ -25,7 +25,7 @@ div.playbar div.currplay h6 {
   color: white;
   margin-left: 10px;
 }
-div.playbar div.currplay div.currimg {
+div.playbar div.currplay #currimg {
   position: fixed;
   bottom: 11vh;
   width: 20vw;
@@ -275,6 +275,7 @@ div.navbar {
   height: 89vh;
 }
 div.navbar div.logo {
+  display: flex;
   padding: 1rem;
 }
 div.navbar div.logo h1 {
@@ -463,4 +464,24 @@ div.theme h2 {
 
 #pauseicon {
   display: none;
+}
+
+.albumtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1rem;
+}
+
+.albumauthor {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  color: gray;
+}
+
+.theme {
+  border-radius: 1rem;
+  padding: 0.75rem;
 }/*# sourceMappingURL=style.css.map */

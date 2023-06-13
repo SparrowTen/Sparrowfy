@@ -1,12 +1,14 @@
     <div class="playbar">
       <div class="currplay">
-        <div class="currimg"></div>
-        <h5>The Kill</h5>
-        <h6>Thirty Seconds To Mars</h6>
+        <div class="currimg">
+          <img src="" alt="" id="currimg">
+        </div>
+        <h5 id="currsong">The Kill</h5>
+        <h6 id="currauthor">Thirty Seconds To Mars</h6>
     </div>
       <div class="control">
         <div class="playOptions">
-            <div onclick="goToStart()" class="mainicons">
+            <div onclick="lastSong()" class="mainicons">
                 <img class="mainicons"
                     src="https://cdn.discordapp.com/attachments/768083738848133130/773142728145371146/skip-back.svg"
                     alt=""></img></div>
@@ -76,8 +78,6 @@
           pauseicon.style.display = 'none';
           var playicon = document.getElementById('playicon');
           playicon.style.display = 'block'
-          audioPlayer.load();
-          audioPlayer.play();
         }
 
         function setVolume() {
@@ -119,8 +119,83 @@
           var currtime = document.getElementById('currtime');
           currtime.innerHTML = time_convert(Math.round(audioPlayer.currentTime));
         }, 250);
-          console.log(songtime * settime);
-          console.log(audioPlayer.currentTime);
+
+        function playsong(id,songname,author) {
+          audioPlayer.load();
+          audioPlayer.setAttribute('src', '../static/song/' + id + '.mp3')
+          setVolume();
+          audioPlayer.play()
+          toggleplayicon();
+          var currsong = document.getElementById('currsong');
+          currsong.innerHTML = songname;
+          var currauthor = document.getElementById('currauthor');
+          currauthor.innerHTML = author;
+          var img = document.getElementById('currimg');
+          img.setAttribute('src','../static/image/' + id + '.png');
+        }
+
+        function init() {
+          audioPlayer.setAttribute('src', '../static/song/1.mp3')
+          var img = document.getElementById('currimg');
+          img.setAttribute('src','../static/image/1.png');
+          var currsong = document.getElementById('currsong');
+          currsong.innerHTML = 'アイドル';
+          var currauthor = document.getElementById('currauthor');
+          currauthor.innerHTML = 'YOASOBI';
+        }
+
+        function nextSong() {
+          var id = getID();
+          id = Number(id);
+          id = id + 1;
+          if(id >= 20){
+            id = 1;
+          }else if(id < 1){
+            id = 20;
+          }
+          
+          var name;
+          var author;
+          axios.get('http://127.0.0.1:5500/api/song/getID?id='+ id)
+            .then((res) => {
+              console.log(res['data'][0]['artist']);
+              name = res['data'][0]['name'];
+              author = res['data'][0]['artist']
+          });
+
+          playsong(id,name,author);
+        }
+
+        function lastSong() {
+          var id = getID();
+          id = Number(id);
+          id = id - 1;
+          if(id >= 20){
+            id = 1;
+          }else if(id < 1){
+            id = 20;
+          }
+
+          var name;
+          var author;
+          axios.get('http://127.0.0.1:5500/api/song/getID?id='+ id)
+            .then((res) => {
+              console.log(res['data'][0]['artist']);
+              name = res['data'][0]['name'];
+              author = res['data'][0]['artist']
+          });
+
+          playsong(id,name,author);
+        }
+        
+
+        function getID() {
+          var idstr = audioPlayer.currentSrc;
+          arr = idstr.split('/');
+          var id = arr[arr.length - 1];
+          id = id.substr(0,id.search('.mp3'));
+          console.log(id); 
+          return id;         
         }
       </script>
     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： db
--- 產生時間： 2023 年 06 月 12 日 19:01
+-- 產生時間： 2023 年 06 月 12 日 17:17
 -- 伺服器版本： 8.0.33
 -- PHP 版本： 8.1.20
 
@@ -32,7 +32,7 @@ CREATE TABLE `playlist` (
   `name` text NOT NULL,
   `user_id` int NOT NULL,
   `song_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -44,7 +44,7 @@ CREATE TABLE `song` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `artist` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `song`
@@ -72,6 +72,7 @@ INSERT INTO `song` (`id`, `name`, `artist`) VALUES
 (19, 'ウタカタララバイ（ウタ from ONE PIECE FILM RED）', 'Ado'),
 (20, '逆光（ウタ from ONE PIECE FILM RED）', 'Ado');
 
+
 -- --------------------------------------------------------
 
 --
@@ -82,27 +83,7 @@ CREATE TABLE `user` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `password` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- 已傾印資料表的索引
---
-
---
--- 資料表索引 `song`
---
-ALTER TABLE `song`
-  ADD PRIMARY KEY (`id`);
-
---
--- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
---
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `song`
---
-ALTER TABLE `song`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

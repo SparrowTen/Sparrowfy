@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Sparrowfy</title>
+  </head>
+  <body>
+    <div class="login-logo">
+      <div class="logo">
+        <img src="../static/image/sparrowfy_logo.svg" />
+        <h1>Sparrowfy</h1>
+      </div>
+    </div>
+    {% csrf_token %}
+    <div class="login-main">
+      <form action="/signup/submit" method="post">
+        <label for="username">Email address or username</label>
+        <input
+          type="text"
+          class="form_input"
+          pattern="[A-Za-z0-9.@_-e]+"
+          name="name"
+          placeholder="Email address or username"
+          required=""
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form_input"
+          name="password"
+          placeholder="Password"
+          required=""
+        />
+        <button class="btn btn_log_in" type="submit">SIGN UP</button>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
