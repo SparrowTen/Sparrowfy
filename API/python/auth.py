@@ -24,7 +24,7 @@ def login():
     password = base64.b64encode(password.encode('utf-8')).decode('utf-8')
     if name == None or password == None:
         return jsonify({'error': '參數錯誤'})
-    data = db.execSelect(f'SELECT * FROM `user` WHERE `name` = `{name}` AND `password` = `{password}`')
+    data = db.execSelect(f'SELECT * FROM `user` WHERE `name` = "{name}" AND `password` = "{password}"')
     if data == []:
         return jsonify({'error': '無此帳號或密碼錯誤'})
     print(jsonify(data))
