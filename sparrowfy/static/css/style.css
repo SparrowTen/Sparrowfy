@@ -441,6 +441,7 @@ div.main {
 }
 
 .searchBar {
+  padding-left: 10px;
   border-radius: 1rem;
   height: 4vh;
   width: 20vw;

@@ -10,5 +10,5 @@ urlpatterns = [
     path("login/", views.login_auth, name="login_auth"),  
     path("signup/submit", views.signupsubmit, name="signupsubmit"),
     path("login/submit", views.loginsubmit, name='loginsubmit'),
-    # path("search/", views.search, name='search_page') 
+    path("main/search", views.search, name='search_page') 
 ]

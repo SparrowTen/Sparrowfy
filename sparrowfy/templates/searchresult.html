@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block content %}
+<div class="navbar">
+  <div class="logo">
+    <div class="logo">
+      <img
+        src="../static/image/sparrowfy_logo.png"
+        alt=""
+        width="40"
+        height="40"
+      />
+      <h1>Sparrowfy</h1>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <i class="fa-sharp fa-solid fa-house" style="color: #7b7474"></i>
+      <h6>Home</h6>
+    </li>
+    <li>
+      <i class="fa-solid fa-magnifying-glass" style="color: #7b7474"></i>
+      <h6>Search</h6>
+    </li>
+    <li>
+      <i class="fa-sharp fa-solid fa-bookmark" style="color: #7b7474"></i>
+      <h6>Your Library</h6>
+    </li>
+  </ul>
+</div>
+<div class="main">
+  <div class="searchbar">
+    <form action="" id="searchBar">
+      <input
+        class="searchBar"
+        placeholder="   Search for song"
+        type="text"
+        name="search"
+        id="searchBar"
+        required=""
+      />
+      <a href="" onclick="searchsubmit()"
+        ><i class="fa-solid fa-magnifying-glass" style="color: #7b7474"></i
+      ></a>
+    </form>
+  </div>
+</div>
+
+<script>
+  const sliders = document.getElementsByClassName("cardContainer");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  for (let ind = 0; ind < sliders.length; ind++) {
+    let slider = sliders[ind];
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("dragging");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("dragging");
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("dragging");
+    });
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+      //   console.log(walk);
+    });
+  }
+</script>

@@ -58,3 +58,10 @@ def loginsubmit(request):
             r = requests.post('http://127.0.0.1:5500/api/auth/login',data=data)
             print(r.text)
             return redirect('/main')
+
+def search(request):
+    if request.method=="POST":
+            search=request.POST['name']
+            r = requests.post('http://127.0.0.1:5500/api/song/getName?name=' + search,data=data)
+            print(r.text)
+            return redirect('/main')
